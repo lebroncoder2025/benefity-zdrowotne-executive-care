@@ -33,7 +33,7 @@ body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-hei
 /* ── Header ──────────────────────────────────── */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(248,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:.85rem 2rem;}
-.brand img{display:block;border-radius:6px;height:56px;width:auto;}
+.brand img{display:block;border-radius:6px;height:80px;width:auto;}
 .site-nav{display:flex;align-items:center;gap:2rem;}
 .site-nav a{font-size:.875rem;font-weight:600;color:var(--ink-mid);text-decoration:none;position:relative;transition:color .25s;}
 .site-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--brand);border-radius:1px;transition:width .3s var(--ease);}
@@ -68,7 +68,7 @@ h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;line-height:1.
 .hero-lead{font-size:1.15rem;color:var(--ink-mid);max-width:540px;line-height:1.7;}
 
 /* ── Section base ────────────────────────────── */
-.section{max-width:var(--max-w);margin:0 auto;padding:5rem 2rem;}
+.section{max-width:var(--max-w);margin:0 auto;padding:3rem 2rem;}
 .section--surface{background:var(--surface);max-width:100%;}.section--surface > *{max-width:var(--max-w);margin-left:auto;margin-right:auto;}
 .section-header{text-align:center;max-width:640px;margin:0 auto 3rem;}
 .section-header h2{margin-top:.5rem;}
