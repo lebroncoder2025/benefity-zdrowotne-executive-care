@@ -188,11 +188,12 @@ h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;line-height:1.
   .promo .promo-inner{flex-direction:column;text-align:center;}
 }
 @media(max-width:640px){
-  .header-inner{padding:.7rem 1.25rem;}
+  .header-inner{padding:.7rem 1.25rem;justify-content:space-between;gap:.75rem;position:relative;}
+  .brand{margin:0;}
   .logo-clip{width:56px;height:56px;}
   .logo-clip img{width:56px;height:56px;}
-  .nav-toggle{display:block;}
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 1.25rem;gap:1rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);}
+  .nav-toggle{display:block;margin-left:auto;}
+  .site-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 1.25rem;gap:1rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);}
   .site-nav.is-open{display:flex;}
   .nav-cta{align-self:flex-start;}
   .hero{padding:2rem 1.25rem;}
