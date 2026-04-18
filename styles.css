@@ -31,7 +31,9 @@ body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-hei
 .reveal-delay-2{transition-delay:.3s;}
 
 /* ── Header ──────────────────────────────────── */
-.site-header{position:sticky;top:0;z-index:100;background:rgba(248,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(248,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);transition:transform .35s ease;}
+.site-header.is-scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1);}
+.site-header.is-hidden{transform:translateY(-100%);}
 .header-inner{display:flex;align-items:center;max-width:var(--max-w);margin:0 auto;padding:.85rem 2rem;gap:1.5rem;}
 .brand{flex-shrink:0;text-decoration:none;margin:.25rem 0;}
 .logo-clip{display:block;width:100px;height:100px;overflow:hidden;border-radius:6px;}
@@ -186,14 +188,22 @@ h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;line-height:1.
   .promo .promo-inner{flex-direction:column;text-align:center;}
 }
 @media(max-width:640px){
+  .header-inner{padding:.7rem 1.25rem;}
+  .logo-clip{width:56px;height:56px;}
+  .logo-clip img{width:56px;height:56px;}
   .nav-toggle{display:block;}
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 2rem;gap:1rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 1.25rem;gap:1rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);}
   .site-nav.is-open{display:flex;}
   .nav-cta{align-self:flex-start;}
   .hero{padding:2rem 1.25rem;}
-  h1{font-size:1.9rem;}
-  .section{padding:3rem 1.25rem;}
+  h1{font-size:1.85rem;}
+  .section{padding:2.5rem 1.25rem;}
+  .contact{padding:2.5rem 1.25rem;}
+  .promo .promo-inner{padding:2rem 1.25rem;gap:1.25rem;}
   .cards-4{grid-template-columns:1fr;}
   .gallery-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
+  .founder-card{padding:1.25rem;}
+  .footer-inner{flex-direction:column;text-align:center;}
+  .footer-inner nav{justify-content:center;flex-wrap:wrap;gap:.75rem;}
 }
