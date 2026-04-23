@@ -35,10 +35,10 @@ img{display:block;max-width:100%;}
 .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.84);backdrop-filter:blur(12px);border-bottom:1px solid rgba(17,34,70,.08);transition:transform .35s ease;}
 .site-header.is-scrolled{box-shadow:0 12px 28px rgba(17,34,70,.12);}
 .site-header.is-hidden{transform:translateY(-100%);}
-.header-inner{display:flex;align-items:center;max-width:var(--max-w);margin:0 auto;padding:.72rem 2rem;gap:1.5rem;}
+.header-inner{display:flex;align-items:center;max-width:var(--max-w);margin:0 auto;padding:.8rem 2rem;gap:1.75rem;}
 .brand{flex-shrink:0;text-decoration:none;}
-.logo-clip{display:block;width:84px;height:84px;overflow:hidden;border-radius:8px;}
-.logo-clip img{display:block;width:84px;height:84px;margin:0;}
+.logo-clip{display:block;width:96px;height:96px;overflow:hidden;border-radius:10px;}
+.logo-clip img{display:block;width:96px;height:96px;margin:0;}
 .site-nav{display:flex;align-items:center;gap:2rem;margin-left:auto;padding-left:clamp(1rem,6vw,5rem);}
 .site-nav a{font-size:.875rem;font-weight:600;color:var(--ink-mid);text-decoration:none;position:relative;transition:color .25s;}
 .site-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--brand);border-radius:1px;transition:width .3s var(--ease);}
@@ -229,8 +229,8 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 }
 @media(max-width:768px){
   .header-inner{padding:.5rem 1rem;justify-content:space-between;gap:.5rem;position:relative;}
-  .logo-clip{width:58px;height:58px;}
-  .logo-clip img{width:58px;height:58px;}
+  .logo-clip{width:68px;height:68px;}
+  .logo-clip img{width:68px;height:68px;}
   .nav-toggle{display:block;order:2;margin-left:auto;}
   .site-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:var(--bg);flex-direction:column;padding:1.25rem 1rem;gap:.8rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);z-index:200;}
   .site-nav.is-open{display:flex;}
@@ -264,8 +264,8 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
   .reveal{opacity:1;transform:none;}
 }
 @media(max-width:400px){
-  .logo-clip{width:52px;height:52px;}
-  .logo-clip img{width:52px;height:52px;}
+  .logo-clip{width:60px;height:60px;}
+  .logo-clip img{width:60px;height:60px;}
   .hero-img-main{width:55%;max-height:220px;}
   .hero-img-accent{width:40%;max-height:180px;}
   h1{font-size:1.5rem;}
