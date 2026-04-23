@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ benefitowe dla pracowników</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --brand: #164ca9;
+      --accent: #dfd11d;
+      --ink: #102142;
+      --paper: #f9fbff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-family: "Sora", Arial, sans-serif;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.12;
+    }
+    .label {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .faq {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(16, 33, 66, 0.08);
+      box-shadow: 0 10px 24px rgba(16, 33, 66, 0.06);
+    }
+    .item strong {
+      display: block;
+      font-family: "Sora", Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+    .tip {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(223, 209, 29, 0.14);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="label">Roboczy materiał do pobrania</span>
+    <h1>FAQ benefitowe dla pracowników</h1>
+    <p>Szablonowy plik do szybkiej podmiany. Można go później rozwinąć do PDF, dokumentu dla onboarding managera albo strony z najczęstszymi pytaniami.</p>
+
+    <div class="faq">
+      <section class="item">
+        <strong>Kiedy mogę zacząć korzystać z pakietu?</strong>
+        <span>Najczęściej od pierwszego dnia aktywacji wskazanego w harmonogramie wdrożenia.</span>
+      </section>
+      <section class="item">
+        <strong>Czy mogę dobrać rodzinę do pakietu?</strong>
+        <span>To zależy od wariantu wybranego przez firmę. Ten punkt podmieniamy na końcowy zakres świadczeń.</span>
+      </section>
+      <section class="item">
+        <strong>Gdzie zgłaszam problem z aktywacją?</strong>
+        <span>W wersji docelowej wpisujemy konkretny kanał wsparcia: HR, concierge albo opiekuna wdrożenia.</span>
+      </section>
+    </div>
+
+    <div class="tip">
+      W finalnej wersji warto dołożyć sekcję: “jak zapisać się do pierwszej wizyty”, “jak działa aplikacja” oraz “co jest w pakiecie premium”.
+    </div>
+  </main>
+</body>
+</html>
