@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prezentacja oferty — Benefity Zdrowotne dla Firm</title>
+  <link rel="icon" href="assets/Projekt-bez-nazwy.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #164ca9;
+      --brand-d: #103a81;
+      --accent: #dfd11d;
+      --ink: #112246;
+      --ink-mid: #46587f;
+      --paper: #f4f7ff;
+      --shadow: 0 20px 44px rgba(17,34,70,.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top right, rgba(223,209,29,.16), transparent 20%), linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+    }
+    .page {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      gap: 20px;
+    }
+    .topbar {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .back-link,
+    .open-direct {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease, color .25s ease;
+    }
+    .back-link {
+      background: var(--brand);
+      color: #fff;
+    }
+    .back-link:hover,
+    .open-direct:hover {
+      transform: translateY(-2px);
+    }
+    .open-direct {
+      color: var(--brand);
+      border: 2px solid rgba(22,76,169,.2);
+      background: rgba(255,255,255,.85);
+    }
+    .heading {
+      flex: 1 1 420px;
+    }
+    .label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+    p {
+      margin: 10px 0 0;
+      color: var(--ink-mid);
+      max-width: 64ch;
+    }
+    .viewer {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      flex: 1 1 auto;
+      min-height: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(22,76,169,.08);
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      min-height: 76vh;
+      border: 0;
+      background: #fff;
+    }
+    @media (max-width: 768px) {
+      .page { padding: 16px; }
+      .topbar { align-items: flex-start; }
+      iframe { min-height: 68vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="heading">
+        <span class="label">Podgląd materiału</span>
+        <h1>Prezentacja oferty</h1>
+        <p>Materiał otwiera się bezpośrednio w przeglądarce. W każdej chwili możesz wrócić do strony głównej albo otworzyć sam PDF w osobnej karcie.</p>
+      </div>
+      <a class="back-link" href="index.html#materialy">Wróć do strony</a>
+      <a class="open-direct" href="docs/prezentacja.pdf" target="_blank" rel="noopener">Otwórz sam PDF</a>
+    </div>
+    <div class="viewer">
+      <iframe src="docs/prezentacja.pdf#toolbar=1&navpanes=0&view=FitH" title="Prezentacja oferty"></iframe>
+    </div>
+  </div>
+</body>
+</html>

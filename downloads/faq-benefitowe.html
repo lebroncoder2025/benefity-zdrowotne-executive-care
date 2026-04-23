@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FAQ benefitowe dla pracowników</title>
+  <link rel="icon" href="../assets/Projekt-bez-nazwy.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -63,11 +67,35 @@
       border-radius: 16px;
       background: rgba(223, 209, 29, 0.14);
     }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 24px rgba(16, 33, 66, 0.12);
+    }
   </style>
 </head>
 <body>
   <main>
-    <span class="label">Roboczy materiał do pobrania</span>
+    <div class="topbar">
+      <span class="label">Roboczy materiał w wersji web</span>
+      <a class="back-link" href="../index.html#materialy">Wróć do strony</a>
+    </div>
     <h1>FAQ benefitowe dla pracowników</h1>
     <p>Szablonowy plik do szybkiej podmiany. Można go później rozwinąć do PDF, dokumentu dla onboarding managera albo strony z najczęstszymi pytaniami.</p>
 

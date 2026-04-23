@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Checklista wdrożenia benefitu zdrowotnego</title>
+  <link rel="icon" href="../assets/Projekt-bez-nazwy.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -80,13 +84,37 @@
       background: rgba(223, 209, 29, 0.12);
       border-radius: 14px;
     }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 24px rgba(16, 33, 66, 0.12);
+    }
   </style>
 </head>
 <body>
   <main>
-    <span class="eyebrow">Roboczy szablon</span>
+    <div class="topbar">
+      <span class="eyebrow">Roboczy szablon</span>
+      <a class="back-link" href="../index.html#materialy">Wróć do strony</a>
+    </div>
     <h1>Checklista wdrożenia pakietu zdrowotnego</h1>
-    <p>Placeholder do podmiany po otrzymaniu finalnych materiałów klienta. Ten plik można pobierać z landing page jako roboczy starter dla zespołu HR.</p>
+    <p>Placeholder do podmiany po otrzymaniu finalnych materiałów klienta. Ten plik otwiera się bezpośrednio w serwisie jako roboczy starter dla zespołu HR.</p>
 
     <div class="grid">
       <section class="card">
