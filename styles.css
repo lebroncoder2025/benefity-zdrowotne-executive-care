@@ -20,6 +20,16 @@
   --ease: cubic-bezier(.22,1,.36,1);
   --max-w: 1200px;
 }
+,/* Skip link for accessibility */
+.skip-link{position:absolute;left:-9999px;top:auto;background:var(--brand);color:#fff;padding:.5rem 1rem;border-radius:8px;z-index:9999}
+.skip-link:focus{left:16px;top:16px;transform:none;box-shadow:var(--shadow);}
+
+/* Policy pages: slightly smaller hero and tighter spacing to match subpage layout */
+.page-hero h1{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:.4rem}
+.page-hero .hero-lead{font-size:1rem;color:var(--ink-mid)}
+.policy-main .section{padding:1.25rem 1.5rem}
+.policy-main h2{font-size:clamp(1.05rem,2.2vw,1.45rem);margin-top:0}
+.footer-inner nav a#bzdf-revoke-consent{color:var(--ink-soft);font-weight:600}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;}
 body{font-family:var(--font-body);color:var(--ink);background:radial-gradient(circle at top right, rgba(223,209,29,.16), transparent 24%),linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
