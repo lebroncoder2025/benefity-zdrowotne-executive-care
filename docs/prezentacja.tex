@@ -1,69 +1,207 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
+\documentclass[12pt,a4paper]{article}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[polish]{babel}
-\usepackage[margin=2.2cm]{geometry}
-\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{mdframed}
+\usepackage{lmodern}
 
-\definecolor{brand}{HTML}{1F5B4D}
-\definecolor{accent}{HTML}{B07A4B}
+% Brand colors — Executive Care
+\definecolor{brand}{HTML}{076951}
+\definecolor{brandDark}{HTML}{054d3b}
+\definecolor{accent}{HTML}{b07a4b}
+\definecolor{surface}{HTML}{efeae3}
+\definecolor{inkMid}{HTML}{4a5c55}
+\definecolor{inkSoft}{HTML}{7b8e87}
+\definecolor{swatchA}{HTML}{076951}
+\definecolor{swatchB}{HTML}{b07a4b}
+\definecolor{swatchC}{HTML}{f8f5f0}
+\definecolor{swatchD}{HTML}{efeae3}
+\definecolor{swatchE}{HTML}{4a5c55}
 
-\hypersetup{colorlinks=true,linkcolor=brand,urlcolor=brand}
+\titleformat{\section}{\Large\bfseries\color{brand}}{}{0em}{}[\color{brand}\hrule]
+\titleformat{\subsection}{\normalsize\bfseries\color{inkMid}}{}{0em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small\color{inkSoft} Benefity Zdrowotne dla Firm}
+\lhead{\small\color{inkSoft} Wariant 01 — Executive Care}
+\rfoot{\small\color{inkSoft}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{brand}\leaders\hrule height \headrulewidth\hfill}}
 
 \begin{document}
 
+% --- STRONA TYTUŁOWA ---
 \begin{titlepage}
-\centering
-{\Huge \textbf{Benefity Zdrowotne dla Firm} \par}
-\vspace{0.5cm}
-{\LARGE Prezentacja koncepcji \textit{Executive Care} \par}
-\vspace{1cm}
-{\large Wariant premium, spokojny i zorientowany na zaufanie \par}
-\vfill
-\includegraphics[width=0.72\linewidth]{../assets/123-1024x686.jpeg}
-\vfill
-{\large 17 kwietnia 2026 \par}
+  \pagecolor{brand}
+  \color{white}
+  \vspace*{1.5cm}
+  \begin{center}
+    {\fontsize{10}{13}\selectfont\MakeUppercase{Benefity Zdrowotne dla Firm}}\\[1.8cm]
+    {\fontsize{30}{36}\selectfont\bfseries Wariant 01\\[0.3em]Executive Care}\\[1.2cm]
+    \textcolor{white!70!brand}{\rule{5cm}{0.4pt}}\\[1cm]
+    {\large Prezentacja koncepcji wizualnej i struktury serwisu}\\[3cm]
+  \end{center}
+  \begin{center}
+    \includegraphics[width=0.82\linewidth]{../assets/HR_0658-scaled.jpg}
+  \end{center}
+  \vfill
+  \begin{center}
+    \textcolor{white!70!brand}{\footnotesize 17 kwietnia 2026}
+  \end{center}
 \end{titlepage}
+\nopagecolor
 
-\section*{Założenie koncepcji}
-Executive Care porządkuje komunikację marki tak, aby strona brzmiała dojrzale, spokojnie i wiarygodnie. To kierunek dla marki, która chce sprzedawać przez jakość obsługi, eksperckość i przewidywalność procesu.
+% --- KONCEPCJA ---
+\section{Założenie koncepcji}
 
-\section*{Co zmienia ten wariant}
-\begin{itemize}
-  \item przesuwa akcent z samego benefitu na bezpieczeństwo operacyjne firmy,
-  \item pokazuje liczby i proces jako dowód wiarygodności,
-  \item ogranicza wizualny chaos i wzmacnia rytm strony,
-  \item traktuje kontakt jako naturalne domknięcie narracji, a nie tylko sekcję na dole.
+\textbf{Executive Care} to wariant premium — spokojny, prestiżowy i oparty na zaufaniu. Strona ma brzmieć jak partner dla właściciela firmy, który kupuje przez bezpieczeństwo i jakość obsługi, a nie przez cenę.
+
+Przekaz skupia się na bezpieczeństwie operacyjnym, eksperckości i przewidywalności procesu. Każdy element strony — typografia, kolorystyka, zdjęcia, układ sekcji — jest podporządkowany jednemu celowi: wzbudzeniu poczucia, że to firma, której można zaufać.
+
+\subsection{Co zmienia ten wariant}
+
+\begin{itemize}[leftmargin=1.5em]
+  \item Przesuwa akcent z samego benefitu na bezpieczeństwo operacyjne firmy
+  \item Pokazuje liczby i proces jako dowód wiarygodności (200+ firm, 98\% odnowień)
+  \item Ogranicza wizualny chaos — czytelna hierarchia, spokojny rytm sekcji
+  \item Traktuje kontakt jako naturalne domknięcie narracji, a nie formularz na dole strony
+  \item Używa zdjęć jako elementu budowania zaufania, nie dekoracji
 \end{itemize}
 
-\section*{Struktura serwisu}
-\begin{longtable}{|p{0.28\linewidth}|p{0.64\linewidth}|}
-\hline
-\textbf{Podstrona} & \textbf{Rola} \\
-\hline
-Start & Oferta, przewagi, korzyści biznesowe, proces, kontakt i moduł konferencyjny \\
-\hline
-O nas & Kompetencje, wyniki, sylwetki ekspertek, zasady współpracy \\
-\hline
-Tam, gdzie dzieje się HR & Wydarzenia jako narzędzie reputacyjne i argument ekspercki \\
-\hline
-\end{longtable}
+\newpage
 
-\section*{Atuty wizualne}
-\begin{itemize}
-  \item fonty o eleganckim charakterze: nagłówki \textit{Fraunces}, tekst \textit{Manrope},
-  \item paleta oparta na zieleni, piaskowym beżu i ciepłych akcentach,
-  \item miękkie karty, zaokrąglone moduły i spokojne przejścia między sekcjami,
-  \item fotografie ułożone jak element zaufania, a nie dekoracja.
+% --- IDENTYFIKACJA WIZUALNA ---
+\section{Identyfikacja wizualna}
+
+\subsection{Paleta kolorów}
+
+\vspace{0.4cm}
+\begin{tabularx}{\textwidth}{@{} p{1.2cm} p{3.5cm} p{3.5cm} X @{}}
+  \toprule
+  \textbf{Próbka} & \textbf{Nazwa} & \textbf{Kod HEX} & \textbf{Zastosowanie} \\
+  \midrule
+  \colorbox{swatchA}{\hspace{1cm}\vphantom{X}} & Zieleń marki & \texttt{\#076951} & Headery, CTA, akcenty \\[0.6em]
+  \colorbox{swatchB}{\hspace{1cm}\vphantom{X}} & Złoto/terakota & \texttt{\#b07a4b} & Akcenty, hover, highlights \\[0.6em]
+  \colorbox{swatchC}{\hspace{1cm}\vphantom{X}} & Krem (tło) & \texttt{\#f8f5f0} & Tło strony głównej \\[0.6em]
+  \colorbox{swatchD}{\hspace{1cm}\vphantom{X}} & Piasek (surface) & \texttt{\#efeae3} & Tło sekcji, karty \\[0.6em]
+  \colorbox{swatchE}{\hspace{1cm}\vphantom{X}} & Szałwia (tekst) & \texttt{\#4a5c55} & Tekst akapitowy \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.8cm}
+\subsection{Typografia}
+
+\begin{tabularx}{\textwidth}{@{} p{3.5cm} p{4cm} X @{}}
+  \toprule
+  \textbf{Krój} & \textbf{Waga / styl} & \textbf{Zastosowanie} \\
+  \midrule
+  Fraunces & Bold, Semibold & Nagłówki H1–H3, cytaty \\
+  Manrope & Regular, Medium, SemiBold & Tekst akapitowy, etykiety, CTA \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.4cm}
+\textit{Fraunces} to nowoczesny serif z charakterem — nadaje nagłówkom ciepły, elegancki ton. \textit{Manrope} to humanistyczny sans-serif gwarantujący czytelność treści przy każdym rozmiarze ekranu.
+
+\vspace{0.8cm}
+\subsection{Charakter wizualny}
+
+\begin{itemize}[leftmargin=1.5em]
+  \item Miękkie cienie i zaokrąglone karty (border-radius 12–16px)
+  \item Zdjęcia kadrowane asymetrycznie, z przestrzenią na oddech
+  \item Animacje scroll-reveal — subtelne, nie rozpraszające
+  \item Hero dwukolumnowy: hasło po lewej, zdjęcia zespołu po prawej
+  \item Sekcja metryk z animowanymi licznikami: 200+ firm, 98\% odnowień, 100\% wdrożeń
 \end{itemize}
 
-\section*{Dlaczego ten kierunek może być skuteczny}
-Ten wariant dobrze wspiera rozmowę z klientem, który kupuje przez zaufanie, kompetencje i jakość obsługi. To dobry kierunek dla marki premium, dla działań relacyjnych oraz dla procesu sprzedaży opartego na rozmowie.
+\newpage
 
-\section*{Podsumowanie}
-Executive Care to wariant najbardziej spokojny i prestiżowy. Ma wzmacniać poczucie, że firma otrzymuje nie tylko pakiet medyczny, ale także uporządkowany proces oraz partnera do długofalowej współpracy.
+% --- STRUKTURA SERWISU ---
+\section{Struktura serwisu}
+
+\subsection{Strona główna — index.html}
+
+\begin{tabularx}{\textwidth}{@{} p{4cm} X @{}}
+  \toprule
+  \rowcolor{surface}
+  \textbf{Sekcja} & \textbf{Cel i zawartość} \\
+  \midrule
+  Hero & Hasło przewodnie, dwa CTA (rozmowa / konferencja), zdjęcia Patrycji i Joanny \\
+  \rowcolor{surface}
+  Metryki & Animowane liczniki: 200+ firm, 98\% odnowień, 100\% wdrożeń na czas \\
+  Przewagi & 4 karty z unikalnymi wartościami: szybkie wdrożenie, ROI, one-stop-shop, ciągłość \\
+  \rowcolor{surface}
+  Korzyści biznesowe & Układ split: infografika kosztów + cytat z raportu Sedlak \& Sedlak \\
+  Proces 3-krokowy & Rozmowa → Oferta → Wdrożenie \\
+  \rowcolor{surface}
+  Promo Wyzwania HR & Baner z ofertą specjalną --10\% \\
+  Kontakt & Dwie karty z profilem ekspertek + formularz emailowy \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.6cm}
+\subsection{O nas — o-nas.html}
+
+\begin{tabularx}{\textwidth}{@{} p{4cm} X @{}}
+  \toprule
+  \rowcolor{surface}
+  \textbf{Sekcja} & \textbf{Cel i zawartość} \\
+  \midrule
+  Founder grid & Duże zdjęcia Patrycji i Joanny z bio i kwalifikacjami \\
+  \rowcolor{surface}
+  Zasady współpracy & 4 karty z wartościami: transparentność, terminowość, dopasowanie, długofalowość \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.6cm}
+\subsection{Tam, gdzie dzieje się HR}
+
+\begin{tabularx}{\textwidth}{@{} p{4cm} X @{}}
+  \toprule
+  \rowcolor{surface}
+  \textbf{Sekcja} & \textbf{Cel i zawartość} \\
+  \midrule
+  Header z opisem & Pozycjonowanie obecności na wydarzeniach HR \\
+  \rowcolor{surface}
+  Galeria foto & Grid z 6 zdjęciami z konferencji — buduje reputację ekspercką \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.8cm}
+
+% --- GALERIA ---
+\section{Galeria z wydarzeń HR}
+
+\begin{center}
+  \includegraphics[width=0.48\textwidth]{../assets/HR_0043-scaled.jpg}\hfill
+  \includegraphics[width=0.48\textwidth]{../assets/HR_0222-scaled.jpg}\\[0.5em]
+  \includegraphics[width=0.48\textwidth]{../assets/HR_0244-scaled.jpg}\hfill
+  \includegraphics[width=0.48\textwidth]{../assets/HR_0364-scaled.jpg}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{mdframed}[backgroundcolor=surface, linecolor=brand, linewidth=1.5pt, innerleftmargin=12pt, innerrightmargin=12pt, innertopmargin=10pt, innerbottommargin=10pt]
+  \textbf{\color{brand}Dlaczego ten kierunek jest skuteczny:}\\[4pt]
+  Executive Care dobrze wspiera rozmowę z klientem, który kupuje przez zaufanie i jakość obsługi. To wariant dla marki premium, dla działań relacyjnych oraz procesu sprzedaży opartego na dialogu, a nie na formularzu.
+\end{mdframed}
+
+\vspace{1.5cm}
+\begin{center}
+  \color{inkMid}\small
+  Benefity Zdrowotne dla Firm · benefityzdrowotne@gmail.com · +48 665 359 534 · +48 791 032 017
+\end{center}
 
 \end{document}

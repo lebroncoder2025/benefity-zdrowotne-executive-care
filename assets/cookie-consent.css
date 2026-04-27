@@ -1,0 +1,8 @@
+/* Minimalny styl banera cookie */
+#bzdf-cookie-banner.bzdf-cookie-banner { position: fixed; right: 16px; left: 16px; bottom: 16px; z-index: 9999; display: block; }
+.bzdf-cookie-banner .bzdf-cookie-inner { background: rgba(20,20,20,0.95); color: #fff; padding: 16px; border-radius: 8px; display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+.bzdf-cookie-banner p { margin: 0; flex: 1 1 60%; font-size: 14px; }
+.bzdf-cookie-actions { display:flex; gap:8px; }
+.bzdf-cookie-actions .btn { padding: 8px 12px; border-radius:6px; border: none; cursor:pointer; }
+.bzdf-cookie-actions .btn.btn-primary { background: #0b74de; color: #fff; }
+.bzdf-cookie-actions .btn { background: rgba(255,255,255,0.12); color:#fff; }
