@@ -20,9 +20,9 @@
   --ease: cubic-bezier(.22,1,.36,1);
   --max-w: 1200px;
 }
-,/* Skip link for accessibility */
-.skip-link{position:absolute;left:50%;top:0;transform:translate(-50%, -140%);background:rgba(22,76,169,.96);color:#fff;padding:.85rem 1.3rem;border-radius:999px;z-index:9999;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:transform .2s ease,opacity .2s ease,visibility .2s ease;pointer-events:none;font-weight:600;letter-spacing:.01em;}
-.skip-link:focus{left:50%;top:1rem;transform:translate(-50%, 0);opacity:1;visibility:visible;pointer-events:auto;}
+/* Skip link for accessibility */
+.skip-link{position:fixed;left:50%;top:1rem;transform:translate(-50%, -120%);background:rgba(22,76,169,.96);color:#fff;padding:.85rem 1.3rem;border-radius:999px;z-index:9999;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:transform .2s ease,opacity .2s ease,visibility .2s ease;pointer-events:none;font-weight:600;letter-spacing:.01em;}
+.skip-link:focus-visible, .skip-link:focus{transform:translate(-50%, 0);opacity:1;visibility:visible;pointer-events:auto;}
 
 /* Policy pages: slightly smaller hero and tighter spacing to match subpage layout */
 .page-hero{max-width:var(--max-w);margin:0 auto;padding:3rem 2rem 1.75rem;text-align:center;}
