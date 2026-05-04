@@ -37,16 +37,16 @@
       <div class="hero-content reveal">
         <p class="overline">Pakiety medyczne dla firm od 5 pracowników</p>
         <h1>Chory pracownik kosztuje.<br>Zdrowy zarabia dla&nbsp;Ciebie.</h1>
-        <p class="hero-lead">Dobieramy pakiety medyczne do branży, budżetu i tempa pracy Twojej firmy. Wdrożenie trwa dni, nie tygodnie — a pracownicy korzystają z opieki od pierwszego dnia.</p>
+        <p class="hero-lead">Dobieramy pakiety medyczne do branży, budżetu i tempa pracy Twojej firmy. Wdrożenie trwa dni, nie tygodnie — a pracownicy korzystają z opieki od pierwszego dnia kolejnego miesiąca.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:benefityzdrowotne@gmail.com">Chcę pakiet dla mojej firmy</a>
+          <a class="btn btn-primary" href="#formularz">Chcę pakiet dla mojej firmy</a>
           <a class="btn btn-outline" href="tel:+48665359534">Zadzwoń: 665 359 534</a>
+          <a class="btn btn-outline" href="tel:+48791032017">Zadzwoń: 791 032 017</a>
         </div>
       </div>
       <div class="hero-visual reveal reveal-delay-1">
-        <div class="hero-images">
-          <img src="assets/patrycja-1-768x1152.jpg" alt="Patrycja Rożek" class="hero-img-main">
-          <img src="assets/0Z7A8137-683x1024.jpg" alt="Zespół Benefity Zdrowotne" class="hero-img-accent">
+        <div class="hero-images hero-images--single">
+          <img src="assets/photo_together.jpeg" alt="Patrycja Rożek i Joanna Ligierska-Sadło" class="hero-img-single">
         </div>
       </div>
     </section>
@@ -94,13 +94,13 @@
           <p class="overline">Korzyści biznesowe</p>
           <h2>To nie jest koszt. To inwestycja, która porządkuje ryzyko kadrowe.</h2>
           <div class="benefits-list">
-            <article><h3>Mniej L4, więcej ciągłości pracy</h3><p>Pracownicy szybciej wracają do zdrowia, a zespół zachowuje rytm pracy i terminowość projektów.</p></article>
+            <article><h3>Mniej L4, więcej ciągłości pracy</h3><p>Pracownicy szybciej wracają do zdrowia, a zespół zachowuje rytm pracy<br>i terminowość projektów.</p></article>
             <article><h3>Silniejsza retencja</h3><p>Dobre benefity obniżają rotację i wzmacniają argument pracodawcy w rozmowach rekrutacyjnych.</p></article>
             <article><h3>Przewidywalny koszt</h3><p>Firma z góry wie, ile kosztuje benefit i co realnie zawiera — bez niejasnych dopłat.</p></article>
           </div>
         </div>
         <div class="benefits-visual">
-          <img src="assets/zlotowki-1024x683.png" alt="Korzyści finansowe" loading="lazy">
+          <img src="assets/counting_money_women.png" alt="Korzyści finansowe dla firmy" loading="lazy">
           <div class="stat-badge"><strong>84%</strong> pracowników deklaruje, że pakiet medyczny wpływa na atrakcyjność pracodawcy. <cite>Sedlak &amp; Sedlak</cite></div>
         </div>
       </div>
@@ -213,7 +213,7 @@
       <div class="steps">
         <article class="step"><span class="step-num">01</span><h3>Rozmowa o potrzebach</h3><p>Analizujemy firmę, strukturę zatrudnienia, budżet i oczekiwania wobec opieki medycznej.</p></article>
         <article class="step"><span class="step-num">02</span><h3>Dopasowana oferta</h3><p>Firma dostaje rozwiązanie skrojone pod realne potrzeby — nie najbliższy szablon z katalogu.</p></article>
-        <article class="step"><span class="step-num">03</span><h3>Szybkie wdrożenie</h3><p>Pracownicy mogą korzystać z lekarzy, badań i rehabilitacji już od następnego dnia.</p></article>
+        <article class="step"><span class="step-num">03</span><h3>Szybkie wdrożenie</h3><p>Pracownicy mogą korzystać z lekarzy, badań i rehabilitacji od pierwszego dnia kolejnego miesiąca.</p></article>
       </div>
     </section>
 
@@ -221,9 +221,9 @@
       <div class="promo-inner">
         <div class="promo-badge">-10%</div>
         <div class="promo-copy">
-          <h2>Oferta specjalna dla uczestników konferencji Wyzwania&nbsp;HR</h2>
+          <h2>Oferta specjalna dla uczestników konferencji, na których jesteśmy partnerem</h2>
           <p>Pakiet medyczny z rabatem 10% dla firm, które poznały nas na wydarzeniu. Wystarczy wspomnieć o konferencji podczas pierwszej rozmowy.</p>
-          <a class="btn btn-primary" href="mailto:benefityzdrowotne@gmail.com?subject=Wyzwania HR — oferta specjalna">Skorzystaj z oferty</a>
+          <a class="btn btn-primary" href="mailto:benefityzdrowotne@gmail.com?subject=Konferencja partnerska — oferta specjalna">Skorzystaj z oferty</a>
         </div>
       </div>
     </section>
@@ -254,10 +254,32 @@
             <a href="https://m.me/100078551106456">Messenger</a>
           </div>
         </article>
-        <article class="contact-card contact-card--email">
-          <h3>Napisz do nas</h3>
-          <p>benefityzdrowotne@gmail.com</p>
-          <a class="btn btn-outline" href="mailto:benefityzdrowotne@gmail.com">Wyślij wiadomość</a>
+        <article class="contact-card contact-card--form" id="formularz">
+          <h3>Formularz kontaktowy</h3>
+          <p>Napisz kilka konkretów o firmie, a przygotujemy kierunek oferty dopasowany do Twojego zespołu.</p>
+          <form class="lead-form" id="lead-form">
+            <label>
+              Imię i nazwisko
+              <input type="text" name="fullName" placeholder="Np. Anna Kowalska" required>
+            </label>
+            <label>
+              E-mail służbowy
+              <input type="email" name="email" placeholder="twoj@firma.pl" required>
+            </label>
+            <label>
+              Nazwa firmy
+              <input type="text" name="company" placeholder="Np. Example Sp. z o.o." required>
+            </label>
+            <label>
+              Liczba pracowników
+              <input type="text" name="teamSize" placeholder="Np. 25 osób">
+            </label>
+            <label class="field--full">
+              Wiadomość
+              <textarea name="message" rows="5" placeholder="Napisz, czego potrzebuje Twoja firma i jaki termin wdrożenia Cię interesuje."></textarea>
+            </label>
+            <button class="btn btn-primary field--full" type="submit">Wyślij zapytanie</button>
+          </form>
         </article>
       </div>
     </section>

@@ -78,4 +78,29 @@
       }
     });
   });
+
+  const leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(leadForm);
+      const fullName = String(data.get('fullName') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const company = String(data.get('company') || '').trim();
+      const teamSize = String(data.get('teamSize') || '').trim();
+      const message = String(data.get('message') || '').trim();
+      const subject = `Zapytanie o pakiet medyczny${company ? ` — ${company}` : ''}`;
+      const body = [
+        `Imię i nazwisko: ${fullName}`,
+        `E-mail: ${email}`,
+        `Firma: ${company}`,
+        teamSize ? `Liczba pracowników: ${teamSize}` : '',
+        '',
+        'Wiadomość:',
+        message || 'Do uzupełnienia podczas rozmowy.'
+      ].filter(Boolean).join('\n');
+
+      window.location.href = `mailto:benefityzdrowotne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
 })();
