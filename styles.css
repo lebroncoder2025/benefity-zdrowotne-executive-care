@@ -173,7 +173,22 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
    Each article contains an inline SVG (viewBox -60 -60 600 560)
    that draws the shaped fill. Content overlays the SVG.
    ══════════════════════════════════════════════════ */
-.puzzle-offer{padding-top:1rem;scroll-margin-top:120px;}
+.puzzle-offer{padding-top:1rem;scroll-margin-top:140px;}
+#materialy{scroll-margin-top:140px;}
+#materialy::before{
+  content:"";
+  display:block;
+  height:140px;
+  margin-top:-140px;
+  visibility:hidden;
+  pointer-events:none;
+}
+.puzzle-piece__body{
+  justify-content:center;
+}
+.puzzle-piece__overlay{
+  align-items:center;
+}
 #materialy::before{
   content:"";
   display:block;
@@ -226,9 +241,13 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 .puzzle-piece__body{
   position:absolute;
   /* Keep text inside safe zone away from tabs/notches */
-  top:16%;left:12%;right:12%;bottom:14%;
+  top:21%;left:17%;right:17%;bottom:19%;
+  padding:1.95rem 2.05rem 1.8rem;
+  box-sizing:border-box;
   display:flex;
   flex-direction:column;
+  align-items:center;
+  text-align:center;
   pointer-events:none;
   transition:opacity .22s ease,transform .28s ease;
 }
@@ -236,22 +255,25 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 .puzzle-piece:focus-within .puzzle-piece__body{opacity:.18;transform:translateY(5px) scale(.986);}
 .puzzle-piece__id{
   display:inline-flex;align-items:center;justify-content:center;
-  width:46px;height:46px;border-radius:13px;
-  font-family:var(--font-head);font-weight:800;font-size:.9rem;
-  margin-bottom:.95rem;flex-shrink:0;
+  width:42px;height:42px;border-radius:12px;
+  font-family:var(--font-head);font-weight:800;font-size:.83rem;
+  margin-bottom:.68rem;flex-shrink:0;
+  align-self:center;
 }
 .puzzle-piece--1 .puzzle-piece__id{background:rgba(22,76,169,.22);color:#0d3580;}
 .puzzle-piece--2 .puzzle-piece__id{background:rgba(150,110,0,.18);color:#7a5200;}
 .puzzle-piece--3 .puzzle-piece__id{background:rgba(18,110,60,.22);color:#0e5c30;}
 .puzzle-piece--4 .puzzle-piece__id{background:rgba(80,50,200,.20);color:#3d22a0;}
 
-.puzzle-piece h3{font-size:1.13rem;font-weight:700;line-height:1.28;margin:0 0 .52rem;color:var(--ink);}
-.puzzle-piece__summary{font-size:.91rem;color:var(--ink-mid);line-height:1.7;margin:0;}
+.puzzle-piece h3{font-size:.98rem;font-weight:700;line-height:1.23;margin:0 0 .38rem;color:var(--ink);text-align:center;}
+.puzzle-piece__summary{font-size:.8rem;color:var(--ink-mid);line-height:1.55;margin:0;text-align:center;}
 
 /* Hover overlay */
 .puzzle-piece__overlay{
   position:absolute;
-  top:16%;left:12%;right:12%;bottom:14%;
+  top:21%;left:17%;right:17%;bottom:19%;
+  padding:1.95rem 2.05rem 1.8rem;
+  box-sizing:border-box;
   display:flex;align-items:center;justify-content:center;
   opacity:0;pointer-events:none;
   transition:opacity .24s ease;
@@ -278,9 +300,13 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 
 @media(max-width:700px){
   .puzzle-grid{grid-template-columns:1fr;gap:1rem;max-width:620px;padding:.35rem 0 .5rem;}
+  .puzzle-piece__body{top:17%;left:13%;right:13%;bottom:14%;padding:1.45rem 1.5rem 1.35rem;}
+  .puzzle-piece__overlay{top:17%;left:13%;right:13%;bottom:14%;padding:1.45rem 1.5rem 1.35rem;}
   .puzzle-piece__bg{border-radius:18px;}
   .puzzle-meta{grid-template-columns:1fr;}
 }
+
+html{scroll-padding-top:140px;}
 
 /* ── Contact ─────────────────────────────────── */
 .contact{max-width:var(--max-w);margin:0 auto;padding:5rem 2rem;}
