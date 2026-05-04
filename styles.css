@@ -168,6 +168,38 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 .promo .btn-primary{background:#fff;color:var(--brand);}
 .promo .btn-primary:hover{background:var(--accent-l);transform:translateY(-2px);}
 
+/* ── Living section ─────────────────────────── */
+.living-section{padding-top:0;}
+.living-shell{position:relative;overflow:hidden;padding:2rem;border-radius:28px;background:linear-gradient(135deg,#102d66 0%,#15449a 55%,#1f57ba 100%);box-shadow:var(--shadow-lg);}
+.living-shell::before{content:'';position:absolute;inset:auto -80px -80px auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(223,209,29,.28) 0%,rgba(223,209,29,0) 72%);pointer-events:none;}
+.living-copy{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:start;}
+.living-copy .overline{color:var(--accent-l);}
+.living-copy h2{color:#fff;max-width:13ch;}
+.living-lead{color:rgba(255,255,255,.78);max-width:58ch;font-size:1rem;line-height:1.7;margin-top:.9rem;}
+.download-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-self:end;}
+.download-card{display:flex;flex-direction:column;gap:.5rem;min-height:170px;padding:1.1rem;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);text-decoration:none;color:#fff;backdrop-filter:blur(12px);transition:transform .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);}
+.download-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.18);border-color:rgba(223,209,29,.5);}
+.download-card:focus-visible{outline:3px solid rgba(223,209,29,.8);outline-offset:4px;}
+.download-card strong{font-family:var(--font-head);font-size:1rem;line-height:1.35;}
+.download-card span:last-child{color:rgba(255,255,255,.76);font-size:.92rem;}
+.download-kicker{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:.3rem .55rem;border-radius:999px;background:rgba(223,209,29,.22);color:var(--accent-l);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
+.case-marquee{position:relative;z-index:1;margin-top:1.5rem;overflow:hidden;mask-image:linear-gradient(to right,transparent 0,black 10%,black 90%,transparent 100%);}
+.case-track{display:flex;gap:1rem;width:max-content;animation:case-scroll 28s linear infinite;}
+.case-marquee:hover .case-track{animation-play-state:paused;}
+.case-card{width:320px;padding:1.25rem;border-radius:22px;background:#fff;color:var(--ink);box-shadow:0 18px 42px rgba(7,24,58,.18);border:1px solid rgba(22,76,169,.1);}
+.case-card--accent{background:linear-gradient(180deg,#f7f4bf 0%,#fffbe3 100%);}
+.case-type{display:inline-flex;align-items:center;justify-content:center;padding:.3rem .55rem;border-radius:999px;background:rgba(22,76,169,.08);color:var(--brand);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.case-card h3{margin:.85rem 0 .45rem;}
+.case-card p{font-size:.92rem;color:var(--ink-mid);}
+.case-card ul{margin-top:1rem;padding-left:1rem;color:var(--ink-mid);}
+.case-card li+li{margin-top:.35rem;}
+.micro-badges{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.35rem;}
+.micro-badges span{display:inline-flex;align-items:center;padding:.55rem .85rem;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-size:.82rem;border:1px solid rgba(255,255,255,.12);}
+@keyframes case-scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(calc(-50% - .5rem));}
+}
+
 /* ══════════════════════════════════════════════════
    PUZZLE OFFER — real SVG interlocking puzzle shapes
    Each article contains an inline SVG (viewBox -60 -60 600 560)
@@ -373,6 +405,9 @@ html{scroll-padding-top:140px;}
   .hero-img-accent{width:35%;max-height:260px;}
   .hero-img-single{width:min(100%, 330px);max-height:390px;}
   .benefits-layout{grid-template-columns:1fr;}
+  .living-copy{grid-template-columns:1fr;}
+  .living-copy h2{max-width:none;}
+  .download-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .puzzle-grid{grid-template-columns:1fr 1fr;}
   .puzzle-piece{margin:0;}
   .puzzle-meta{grid-template-columns:1fr;}
@@ -400,6 +435,10 @@ html{scroll-padding-top:140px;}
   .section{padding:2rem 1rem;}
   .contact{padding:2rem 1rem;}
   .promo .promo-inner{padding:1.5rem 1rem;gap:1rem;}
+  .living-shell{padding:1.5rem;}
+  .download-grid{grid-template-columns:1fr;}
+  .download-card{min-height:auto;}
+  .case-card{width:280px;}
   .puzzle-grid{grid-template-columns:1fr;gap:1rem;max-width:620px;padding:.35rem 0 .5rem;}
   .puzzle-piece{min-height:auto;margin:0;}
   .puzzle-piece__connector{display:none;}
@@ -428,5 +467,6 @@ html{scroll-padding-top:140px;}
   h1{font-size:1.5rem;}
   .btn{font-size:.82rem;padding:.65rem 1.2rem;}
   .hero-img-single{max-width:220px;max-height:270px;}
+  .case-card{width:250px;}
   .metrics-grid{grid-template-columns:1fr;}
 }
