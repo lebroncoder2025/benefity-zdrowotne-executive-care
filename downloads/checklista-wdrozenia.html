@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Checklista wdrożenia benefitu zdrowotnego</title>
+  <title>Co nas wyróżnia — Benefity Zdrowotne dla Firm</title>
   <link rel="icon" href="../assets/Projekt-bez-nazwy.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,12 @@
     :root {
       color-scheme: light;
       --brand: #164ca9;
+      --brand-d: #103a81;
       --accent: #dfd11d;
       --ink: #102142;
+      --ink-mid: #46587f;
       --paper: #f6f8ff;
+      --surface: #eef4ff;
     }
     * { box-sizing: border-box; }
     body {
@@ -25,7 +28,7 @@
       line-height: 1.65;
     }
     main {
-      max-width: 860px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 48px 24px 72px;
     }
@@ -53,13 +56,36 @@
       font-size: 20px;
       margin: 32px 0 12px;
     }
+    h3, h4 {
+      margin: 0;
+      font-family: "Sora", Arial, sans-serif;
+    }
     p {
       margin: 16px 0 0;
-      max-width: 64ch;
+      max-width: 72ch;
+      color: var(--ink-mid);
+    }
+    .intro {
+      margin-top: 18px;
+      max-width: 78ch;
+    }
+    .highlight {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border-radius: 22px;
+      background: var(--surface);
+      border: 1px solid rgba(22, 76, 169, 0.12);
+      box-shadow: 0 10px 24px rgba(16, 33, 66, 0.08);
+    }
+    .highlight strong {
+      display: block;
+      font-family: "Sora", Arial, sans-serif;
+      color: var(--brand-d);
+      line-height: 1.4;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
       margin-top: 28px;
     }
@@ -70,19 +96,36 @@
       border: 1px solid rgba(16, 33, 66, 0.08);
       box-shadow: 0 10px 24px rgba(16, 33, 66, 0.08);
     }
-    ul {
-      margin: 12px 0 0;
-      padding-left: 18px;
+    .card-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(22, 76, 169, 0.1);
+      color: var(--brand);
+      font-family: "Sora", Arial, sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 12px;
     }
-    li + li {
-      margin-top: 8px;
+    .card h3 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 10px;
     }
     .note {
       margin-top: 28px;
-      padding: 18px 20px;
-      border-left: 4px solid var(--accent);
-      background: rgba(223, 209, 29, 0.12);
-      border-radius: 14px;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 16px 32px rgba(16, 33, 66, 0.12);
+    }
+    .note p {
+      color: rgba(255,255,255,.9);
+      max-width: none;
     }
     .topbar {
       display: flex;
@@ -105,46 +148,66 @@
       text-decoration: none;
       box-shadow: 0 12px 24px rgba(16, 33, 66, 0.12);
     }
+    @media (max-width: 768px) {
+      main {
+        padding: 32px 18px 56px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <div class="topbar">
-      <span class="eyebrow">Roboczy szablon</span>
+      <span class="eyebrow">Materiał dla firm i HR</span>
       <a class="back-link" href="../index.html#materialy">Wróć do strony</a>
     </div>
-    <h1>Checklista wdrożenia pakietu zdrowotnego</h1>
-    <p>Placeholder do podmiany po otrzymaniu finalnych materiałów klienta. Ten plik otwiera się bezpośrednio w serwisie jako roboczy starter dla zespołu HR.</p>
+    <h1>Wyróżniki modelu nieabonamentowego</h1>
+    <p class="intro">Ten materiał porządkuje najważniejsze atuty rozwiązania, o którym rozmawiamy z właścicielami firm, HR-em i osobami odpowiedzialnymi za benefity. Ma pomóc szybko ocenić, gdzie ten model realnie wspiera ludzi, procesy i interes biznesu.</p>
+
+    <section class="highlight">
+      <strong>Najważniejszy wyróżnik: model nieabonamentowy — jedyny na rynku.</strong>
+      <p>Pieniądze idą za pacjentem, więc w interesie placówek jest zorganizować wizytę jak najszybciej, bo dopiero wtedy otrzymują wynagrodzenie. To mechanizm, który naturalnie podnosi standard obsługi i wyraźnie wyróżnia ten model na rynku.</p>
+    </section>
 
     <div class="grid">
       <section class="card">
-        <h2>1. Decyzja i zakres</h2>
-        <ul>
-          <li>określ budżet miesięczny na osobę</li>
-          <li>wybierz grupę objętą benefitem</li>
-          <li>ustal datę startu programu</li>
-        </ul>
+        <div class="card-number">1</div>
+        <h3>Ogólnopolski dostęp</h3>
+        <p>W pakiecie są zarówno małe gabinety z wysoko ocenianymi specjalistami, jak i duże renomowane placówki, a całość obejmuje ponad 3 400 placówek w całej Polsce oraz możliwość włączenia placówki wskazanej przez pracowników.</p>
       </section>
       <section class="card">
-        <h2>2. Komunikacja do zespołu</h2>
-        <ul>
-          <li>mail startowy od zarządu lub HR</li>
-          <li>krótkie FAQ dla pracowników</li>
-          <li>jedna osoba kontaktowa po stronie firmy</li>
-        </ul>
+        <div class="card-number">2</div>
+        <h3>Wygoda korzystania</h3>
+        <p>Nielimitowany dostęp do specjalistów bez skierowania, lekarz POZ w ciągu 1 dnia roboczego, specjalista w ciągu 5 dni oraz e-wizyty z konsultacjami, skierowaniami, e-receptami, e-zwolnieniami i omawianiem wyników.</p>
       </section>
       <section class="card">
-        <h2>3. Start wdrożenia</h2>
-        <ul>
-          <li>lista pracowników w odpowiednim formacie</li>
-          <li>termin aktywacji pakietów</li>
-          <li>materiały onboardingowe do pobrania</li>
-        </ul>
+        <div class="card-number">3</div>
+        <h3>Rehabilitacja i wsparcie po wypadkach</h3>
+        <p>Rehabilitacja powypadkowa ze sprzętem w cenie pakietu, organizacja pomocy po hospitalizacji oraz dodatkowa rehabilitacja bólową, szczególnie przydatna przy pracy biurowej i przeciążeniach kręgosłupa.</p>
+      </section>
+      <section class="card">
+        <div class="card-number">4</div>
+        <h3>Elastyczność i dopasowanie</h3>
+        <p>Możliwość zmiany pakietu na wyższy w każdej chwili, częściowa refundacja kosztów z placówek spoza listy i model, który łatwo dopasować do potrzeb firmy i struktury zespołu.</p>
+      </section>
+      <section class="card">
+        <div class="card-number">5</div>
+        <h3>Pełna obsługa i opieka doradcy</h3>
+        <p>Bezpośredni kontakt z doradcą na każdym etapie, wsparcie przy wdrażaniu, deklaracjach i bieżących pytaniach oraz organizacja akcji wellbeingowych i edukacyjnych, aby pracownicy faktycznie korzystali z pakietu.</p>
+      </section>
+      <section class="card">
+        <div class="card-number">6</div>
+        <h3>Pakiet Rodzic</h3>
+        <p>Specjalny, dedykowany pakiet ze specjalistami dla starszych osób, przydatny tam, gdzie pracownicy często wspierają rodziców lub opiekunów.</p>
       </section>
     </div>
 
     <div class="note">
-      Docelowo podmieniamy ten materiał na finalny PDF, checklistę w brandzie klienta albo plik dla działu HR.
+      <strong>Co dzieje się dalej?</strong>
+      <p>Po otrzymaniu formularza wracamy z krótką rozmową, propozycją kierunku oferty i listą najważniejszych decyzji do podjęcia. Dzięki temu od początku wiadomo, co chroni pracowników, a co zabezpiecza interes właściciela firmy.</p>
     </div>
   </main>
 </body>
