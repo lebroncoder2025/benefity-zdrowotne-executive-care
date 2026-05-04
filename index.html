@@ -110,11 +110,13 @@
       <div class="section-header puzzle-offer-header">
         <p class="overline">Oferta</p>
         <h2 id="puzzle-offer-title">Cztery elementy, które składają się na dobrze działającą firmę.</h2>
-        <p class="puzzle-lead">Najważniejszy wyróżnik to model nieabonamentowy: pieniądze idą za pacjentem, więc placówkom zależy na sprawnym organizowaniu wizyt i realnym standardzie obsługi. Najedź na każdy element, żeby zobaczyć, co dokładnie wnosi do firmy.</p>
+        <p class="puzzle-lead">Najważniejszy wyróżnik to model nieabonamentowy: pieniądze idą za pacjentem, więc placówkom zależy na sprawnym organizowaniu wizyt i realnym standardzie obsługi. Najedź lub kliknij każdy element, żeby zobaczyć, co dokładnie wnosi do firmy.</p>
       </div>
       <div class="puzzle-wrap">
-        <div class="puzzle-board" aria-label="Cztery filary oferty dla firmy">
+        <div class="puzzle-grid" aria-label="Cztery filary oferty dla firmy">
           <article class="puzzle-piece puzzle-piece--1" tabindex="0">
+            <span class="puzzle-piece__connector puzzle-piece__connector--right-out" aria-hidden="true"></span>
+            <span class="puzzle-piece__connector puzzle-piece__connector--bottom-out" aria-hidden="true"></span>
             <span class="puzzle-piece__id">01</span>
             <h3>Kluczowi pracownicy</h3>
             <p class="puzzle-piece__summary">Dbasz o osoby, od których zależy tempo pracy i odpowiedzialność za wynik.</p>
@@ -123,6 +125,8 @@
             </div>
           </article>
           <article class="puzzle-piece puzzle-piece--2" tabindex="0">
+            <span class="puzzle-piece__connector puzzle-piece__connector--left-in" aria-hidden="true"></span>
+            <span class="puzzle-piece__connector puzzle-piece__connector--bottom-in" aria-hidden="true"></span>
             <span class="puzzle-piece__id">02</span>
             <h3>Czerwona teczka bezpiecznego pracownika</h3>
             <p class="puzzle-piece__summary">Pakiet działa również po trudnych sytuacjach zdrowotnych i zdarzeniach nagłych.</p>
@@ -131,6 +135,8 @@
             </div>
           </article>
           <article class="puzzle-piece puzzle-piece--3" tabindex="0">
+            <span class="puzzle-piece__connector puzzle-piece__connector--top-in" aria-hidden="true"></span>
+            <span class="puzzle-piece__connector puzzle-piece__connector--right-in" aria-hidden="true"></span>
             <span class="puzzle-piece__id">03</span>
             <h3>Zdrowie pracowników</h3>
             <p class="puzzle-piece__summary">Liczy się wygoda korzystania, a nie sam zapis w ofercie benefitowej.</p>
@@ -139,6 +145,8 @@
             </div>
           </article>
           <article class="puzzle-piece puzzle-piece--4" tabindex="0">
+            <span class="puzzle-piece__connector puzzle-piece__connector--top-out" aria-hidden="true"></span>
+            <span class="puzzle-piece__connector puzzle-piece__connector--left-out" aria-hidden="true"></span>
             <span class="puzzle-piece__id">04</span>
             <h3>Zabezpieczenie interesów właściciela biznesu</h3>
             <p class="puzzle-piece__summary">Masz przewidywalny koszt, doradcę i rozwiązanie dopasowane do realiów firmy.</p>
@@ -146,9 +154,10 @@
               <p>Ogólnopolski dostęp, możliwość zmiany pakietu, częściowa refundacja spoza listy i bezpośrednie wsparcie doradcy porządkują ryzyko kadrowe oraz decyzje właścicielskie.</p>
             </div>
           </article>
-          <div class="puzzle-core" aria-hidden="true">
-            <span>Dobrze działająca firma</span>
-          </div>
+        </div>
+        <div class="puzzle-assembled" aria-hidden="true">
+          <span class="puzzle-assembled__label">Razem tworzą</span>
+          <strong>Dobrze działającą firmę</strong>
         </div>
         <div class="puzzle-meta">
           <div class="puzzle-note">
@@ -211,8 +220,8 @@
         </article>
         <article class="contact-card contact-card--form" id="formularz">
           <h3>Formularz kontaktowy</h3>
-          <p>Po wysłaniu formularza pobierzesz darmowy PDF z wyróżnikami modelu i zakresem informacji, które zbieramy przed konsultacją.</p>
-          <form class="lead-form" id="lead-form" data-pdf="downloads/darmowy-pdf-wyrozniki.pdf">
+          <p>Wypełnij formularz, a my przygotujemy kierunek rozmowy. Darmowy PDF z wyróżnikami możesz pobrać od razu poniżej.</p>
+          <form class="lead-form" id="lead-form">
             <label>
               Adres e-mail
               <input type="email" name="email" placeholder="twoj@firma.pl" required>
@@ -243,9 +252,12 @@
               <input type="checkbox" name="consent" required>
               <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Benefity zdrowotne dla firm, w celu obsługi zgłoszenia przesłanego za pośrednictwem formularza zgłoszeniowego. Podanie danych jest dobrowolne, jednak niezbędne do realizacji zgłoszenia i kontaktu w sprawie konsultacji. Administratorem danych osobowych jest firma Benefity zdrowotne dla firm.</span>
             </label>
-            <p class="lead-form-note field--full">Kliknięcie przycisku pobierze darmowy PDF „Wyróżniki” i otworzy gotową wiadomość e-mail z Twoim zgłoszeniem.</p>
+            <p class="lead-form-note field--full">Kliknięcie przycisku otworzy gotową wiadomość e-mail z Twoim zgłoszeniem. PDF pobierzesz osobnym przyciskiem poniżej.</p>
             <p class="lead-form-feedback field--full" aria-live="polite"></p>
-            <button class="btn btn-primary field--full" type="submit">Wyślij i pobierz PDF</button>
+            <div class="lead-form-actions field--full">
+              <button class="btn btn-primary" type="submit">Wyślij zgłoszenie</button>
+              <a class="btn btn-outline" href="downloads/darmowy-pdf-wyrozniki.pdf" download>Pobierz darmowy PDF</a>
+            </div>
           </form>
         </article>
       </div>

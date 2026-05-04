@@ -91,7 +91,6 @@
       const companySize = String(data.get('companySize') || '').trim();
       const phone = String(data.get('phone') || '').trim();
       const consent = data.get('consent') ? 'Tak' : 'Nie';
-      const pdfUrl = leadForm.dataset.pdf || 'downloads/darmowy-pdf-wyrozniki.pdf';
       const subject = `Zapytanie o pakiet medyczny${company ? ` — ${company}` : ''}`;
       const body = [
         `E-mail: ${email}`,
@@ -105,20 +104,10 @@
       ].filter(Boolean).join('\n');
 
       if (feedback) {
-        feedback.textContent = 'Pobieramy PDF i otwieramy wiadomość e-mail...';
+        feedback.textContent = 'Otwieramy wiadomość e-mail z Twoim zgłoszeniem...';
       }
 
-      const downloadLink = document.createElement('a');
-      downloadLink.href = pdfUrl;
-      downloadLink.download = 'darmowy-pdf-wyrozniki.pdf';
-      downloadLink.style.display = 'none';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      downloadLink.remove();
-
-      window.setTimeout(() => {
-        window.location.href = `mailto:benefityzdrowotne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      }, 180);
+      window.location.href = `mailto:benefityzdrowotne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 })();
