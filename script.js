@@ -81,26 +81,45 @@
 
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
+    const feedback = leadForm.querySelector('.lead-form-feedback');
     leadForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const data = new FormData(leadForm);
-      const fullName = String(data.get('fullName') || '').trim();
       const email = String(data.get('email') || '').trim();
+      const fullName = String(data.get('fullName') || '').trim();
       const company = String(data.get('company') || '').trim();
-      const teamSize = String(data.get('teamSize') || '').trim();
-      const message = String(data.get('message') || '').trim();
+      const companySize = String(data.get('companySize') || '').trim();
+      const phone = String(data.get('phone') || '').trim();
+      const consent = data.get('consent') ? 'Tak' : 'Nie';
+      const pdfUrl = leadForm.dataset.pdf || 'downloads/darmowy-pdf-wyrozniki.pdf';
       const subject = `Zapytanie o pakiet medyczny${company ? ` — ${company}` : ''}`;
       const body = [
-        `Imię i nazwisko: ${fullName}`,
         `E-mail: ${email}`,
+        `Imię i nazwisko osoby do kontaktu: ${fullName}`,
         `Firma: ${company}`,
-        teamSize ? `Liczba pracowników: ${teamSize}` : '',
+        companySize ? `Wielkość firmy: ${companySize}` : '',
+        phone ? `Numer telefonu: ${phone}` : '',
+        `Zgoda na przetwarzanie danych: ${consent}`,
         '',
-        'Wiadomość:',
-        message || 'Do uzupełnienia podczas rozmowy.'
+        'Po wysłaniu zgłoszenia przekażemy bezpłatny PDF z wyróżnikami oraz omówimy najlepszy wariant pakietu.'
       ].filter(Boolean).join('\n');
 
-      window.location.href = `mailto:benefityzdrowotne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (feedback) {
+        feedback.textContent = 'Pobieramy PDF i otwieramy wiadomość e-mail...';
+      }
+
+      const downloadLink = document.createElement('a');
+      downloadLink.href = pdfUrl;
+      downloadLink.download = 'darmowy-pdf-wyrozniki.pdf';
+      downloadLink.style.display = 'none';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+
+      window.setTimeout(() => {
+        window.location.href = `mailto:benefityzdrowotne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }, 180);
     });
   }
 })();
+ 
