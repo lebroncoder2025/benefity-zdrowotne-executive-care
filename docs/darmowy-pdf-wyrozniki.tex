@@ -1,16 +1,16 @@
-\documentclass[11pt,a4paper]{article}
+﻿\documentclass[10pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[polish]{babel}
 \usepackage{lmodern}
-\usepackage[margin=2.1cm]{geometry}
+\usepackage[top=1.8cm, bottom=1.8cm, left=2cm, right=2cm]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage{parskip}
+\usepackage[parfill]{parskip}
 \usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
 
 \definecolor{brand}{HTML}{164CA9}
 \definecolor{branddark}{HTML}{103A81}
@@ -22,107 +22,156 @@
   colorlinks=true,
   urlcolor=brand,
   linkcolor=brand,
-  pdftitle={Darmowy PDF -- Wyróżniki modelu nieabonamentowego},
+  pdftitle={Wyrozniki modelu nieabonamentowego -- Benefity Zdrowotne dla Firm},
   pdfauthor={Benefity Zdrowotne dla Firm}
 }
 
-\setlist[itemize]{leftmargin=1.2em, itemsep=0.35em, topsep=0.4em}
+\setlength{\parskip}{0.3em}
+
+\setlist[itemize]{
+  leftmargin=1.3em,
+  itemsep=0.15em,
+  topsep=0.15em,
+  parsep=0pt,
+  label={\textcolor{brand}{\textbullet}}
+}
 
 \begin{document}
 \pagestyle{empty}
 
-{\color{brand}\Large\bfseries Benefity Zdrowotne dla Firm}\par
-\vspace{0.5em}
-{\huge\bfseries Darmowy PDF po formularzu kontaktowym}\par
+%--- HEADER ---
+\noindent
+\begin{minipage}[c]{0.44\textwidth}
+  \includegraphics[height=2cm]{../assets/Projekt-bez-nazwy.png}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.52\textwidth}
+  \raggedleft
+  {\large\bfseries\color{brand} Wyrozniki modelu nieabonamentowego}\\[0.2em]
+  {\small\color{textgray} materiał dla firm i działow HR}
+\end{minipage}
+
+\vspace{0.3em}
+\noindent\textcolor{accent}{\rule{\textwidth}{4pt}}
+\vspace{0.35em}
+
+%--- INTRO ---
+{\small\color{textgray}
+Ten materiał porządkuje najważniejsze atuty rozwiązania, o ktorym rozmawiamy z właścicielami firm,
+HR-em i osobami odpowiedzialnymi za benefity. Ma pomoc szybko ocenić, gdzie ten model realnie
+wspiera ludzi, procesy i interes biznesu.
+}
+
 \vspace{0.4em}
-{\Large\bfseries Wyróżniki modelu nieabonamentowego dla firm}\par
-\vspace{1.1em}
 
-{\color{textgray}
-Ten materiał porządkuje najważniejsze atuty rozwiązania, o którym rozmawiamy z właścicielami firm, HR-em i osobami odpowiedzialnymi za benefity. Ma pomóc szybko ocenić, gdzie ten model realnie wspiera ludzi, procesy i interes biznesu.
-}\par
+%--- HIGHLIGHT BOX ---
+\begin{tcolorbox}[
+  colback=lightbox,
+  colframe=brand,
+  arc=2mm,
+  boxrule=1.2pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt
+]
+{\color{branddark}\bfseries Najważniejszy wyroznik: model nieabonamentowy --- jedyny na rynku.}\\[0.25em]
+{\small\color{textgray}
+Pieniądze idą za pacjentem, więc w interesie placowek jest zorganizować wizytę jak najszybciej,
+bo dopiero wtedy otrzymują wynagrodzenie. To mechanizm, ktory naturalnie podnosi standard obsługi
+i wyraznie wyroznia ten model na rynku.
+}
+\end{tcolorbox}
 
-\vspace{1em}
-\noindent\fcolorbox{brand}{lightbox}{%
-\parbox{0.96\linewidth}{%
-\textbf{Najważniejszy wyróżnik: model nieabonamentowy, jedyny na rynku.}\\[0.35em]
-Pieniądze idą za pacjentem, więc w interesie placówek jest zorganizować wizytę jak najszybciej, bo dopiero wtedy otrzymują wynagrodzenie. To mechanizm, który naturalnie podnosi standard obsługi i wyraźnie wyróżnia ten model na rynku.
-}}
+\vspace{0.55em}
 
-\vspace{1.4em}
-{\Large\bfseries \color{branddark} 6 kluczowych atutów}\par
-\vspace{0.7em}
+%--- SECTION TITLE ---
+\noindent
+\colorbox{brand}{\hspace{0.4em}\color{white}\normalsize\bfseries 6 kluczowych atutow\hspace{0.4em}}
+\vspace{0.35em}
 
-\textbf{1. Ogólnopolski dostęp}
+%--- 1 ---
+\noindent{\color{brand}\bfseries 1.~Ogolnopolski dostęp}
 \begin{itemize}
-  \item w pakiecie są zarówno małe gabinety z wysoko ocenianymi specjalistami, jak i duże renomowane placówki,
-  \item ponad 3400 placówek w całej Polsce,
-  \item możliwość włączenia placówki wskazanej przez pracowników.
+  \item w pakiecie są zarowno małe gabinety z wysoko ocenianymi specjalistami, jak i duże renomowane placowki,
+  \item ponad 3\,400 placowek w całej Polsce,
+  \item możliwość włączenia placowki wskazanej przez pracownikow.
 \end{itemize}
 
-\textbf{2. Wygoda korzystania}
+%--- 2 ---
+\noindent{\color{brand}\bfseries 2.~Wygoda korzystania}
 \begin{itemize}
-  \item nielimitowany dostęp do specjalistów bez skierowania,
+  \item nielimitowany dostęp do specjalistow bez skierowania,
   \item lekarz POZ w ciągu 1 dnia roboczego, specjalista w ciągu 5 dni,
-  \item e-wizyty: konsultacje, skierowania, e-recepty, e-zwolnienia i omawianie wyników.
+  \item e-wizyty: konsultacje, skierowania, e-recepty, e-zwolnienia i omawianie wynikow.
 \end{itemize}
 
-\textbf{3. Rehabilitacja i wsparcie po wypadkach}
+%--- 3 ---
+\noindent{\color{brand}\bfseries 3.~Rehabilitacja i wsparcie po wypadkach}
 \begin{itemize}
   \item rehabilitacja powypadkowa ze sprzętem w cenie pakietu,
-  \item organizacja pomocy po hospitalizacji: pielęgniarka, pomoc domowa, zwrot kosztów leków,
-  \item dodatkowa rehabilitacja bólowa, często przydatna przy pracy biurowej i przeciążeniach kręgosłupa.
+  \item organizacja pomocy po hospitalizacji: pielęgniarka, pomoc domowa, zwrot kosztow lekow,
+  \item dodatkowa rehabilitacja bolowa, często przydatna przy pracy biurowej i przeciążeniach kręgosłupa.
 \end{itemize}
 
-\textbf{4. Elastyczność i dopasowanie}
+%--- 4 ---
+\noindent{\color{brand}\bfseries 4.~Elastyczność i dopasowanie}
 \begin{itemize}
   \item możliwość zmiany pakietu na wyższy w każdej chwili,
-  \item częściowa refundacja kosztów z placówek spoza listy,
+  \item częściowa refundacja kosztow z placowek spoza listy,
   \item model łatwo dopasować do potrzeb firmy i struktury zespołu.
 \end{itemize}
 
-\textbf{5. Pełna obsługa i opieka doradcy}
+%--- 5 ---
+\noindent{\color{brand}\bfseries 5.~Pełna obsługa i opieka doradcy}
 \begin{itemize}
   \item bezpośredni kontakt z doradcą na każdym etapie,
   \item wsparcie przy wdrażaniu, deklaracjach i bieżących pytaniach,
   \item organizacja akcji wellbeingowych i edukacyjnych, aby pracownicy faktycznie korzystali z pakietu.
 \end{itemize}
 
-\textbf{6. Pakiet Rodzic}
+%--- 6 ---
+\noindent{\color{brand}\bfseries 6.~Pakiet Rodzic}
 \begin{itemize}
-  \item specjalny, dedykowany pakiet ze specjalistami dla starszych osób,
-  \item rozwiązanie przydatne tam, gdzie pracownicy często wspierają rodziców lub opiekunów.
+  \item specjalny, dedykowany pakiet ze specjalistami dla starszych osob,
+  \item rozwiązanie przydatne tam, gdzie pracownicy często wspierają rodzicow lub opiekunow.
 \end{itemize}
 
-\vspace{1.1em}
-{\Large\bfseries \color{branddark} Jakie informacje zbieramy przed konsultacją?}\par
-\vspace{0.5em}
+\vspace{0.55em}
 
-\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{0.35\linewidth}X@{}}
-\toprule
-Pole z formularza & Do czego jest potrzebne \\
-\midrule
-Adres e-mail & żeby przesłać podsumowanie rozmowy i dalsze kroki \\
-Imię i nazwisko osoby do kontaktu & żeby wiedzieć, z kim prowadzimy proces i do kogo wracamy z ofertą \\
-Nazwa firmy & żeby dopasować język rozmowy i zakres oferty do realiów organizacji \\
-Wielkość firmy & żeby od razu dobrać właściwe warianty pakietów i tryb wdrożenia \\
-Numer telefonu & żeby przyspieszyć kontakt, gdy liczy się szybka decyzja lub termin wdrożenia \\
-Zgoda na przetwarzanie danych & żeby legalnie obsłużyć zgłoszenie i wrócić z konsultacją \\
-\bottomrule
-\end{tabularx}
-
-\vspace{1.1em}
-\noindent\fcolorbox{brand}{white}{%
-\parbox{0.96\linewidth}{%
-\textbf{Co dzieje się dalej?}\\[0.35em]
-Po otrzymaniu formularza wracamy z krótką rozmową, propozycją kierunku oferty i listą najważniejszych decyzji do podjęcia. Dzięki temu od początku wiadomo, co chroni pracowników, a co zabezpiecza interes właściciela firmy.
-}}
+%--- CTA BOX ---
+\begin{tcolorbox}[
+  colback=brand,
+  colframe=brand,
+  arc=2mm,
+  boxrule=0pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt
+]
+{\color{white}\bfseries Co dzieje się dalej?}\\[0.2em]
+{\small\color{white}
+Po otrzymaniu formularza wracamy z krotką rozmową, propozycją kierunku oferty i listą
+najważniejszych decyzji do podjęcia. Dzięki temu od początku wiadomo, co chroni pracownikow,
+a co zabezpiecza interes właściciela firmy.
+}
+\end{tcolorbox}
 
 \vfill
 
+%--- FOOTER ---
+\noindent\textcolor{accent}{\rule{\textwidth}{3pt}}\\[0.25em]
 {\small\color{textgray}
-Benefity Zdrowotne dla Firm\\
-\href{mailto:benefityzdrowotne@gmail.com}{benefityzdrowotne@gmail.com} \textbar\ +48 665 359 534 \textbar\ +48 791 032 017
+\textbf{\color{brand}Benefity Zdrowotne dla Firm}\enspace\textbar\enspace
+\href{mailto:benefityzdrowotne@gmail.com}{benefityzdrowotne@gmail.com}\enspace\textbar\enspace
++48\,665\,359\,534\enspace\textbar\enspace
++48\,791\,032\,017
 }
+
+%=== PAGE 2 — ANKIETA ===
+\clearpage
+\newgeometry{top=0.4cm, bottom=0.4cm, left=0.4cm, right=0.4cm}
+\pagestyle{empty}
+
+\vspace*{\fill}
+\begin{center}
+  \includegraphics[width=\textwidth, height=\dimexpr\textheight-0.8cm\relax, keepaspectratio]{ankieta-tyl.png}
+\end{center}
+\vspace*{\fill}
 
 \end{document}
