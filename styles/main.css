@@ -176,12 +176,12 @@ h3{font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1.35;
 .living-copy .overline{color:var(--accent-l);}
 .living-copy h2{color:#fff;max-width:13ch;}
 .living-lead{color:rgba(255,255,255,.78);max-width:58ch;font-size:1rem;line-height:1.7;margin-top:.9rem;}
-.download-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-self:end;}
+.download-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;grid-column:1 / -1;align-self:end;}
 .download-card{display:flex;flex-direction:column;gap:.5rem;min-height:170px;padding:1.1rem;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);text-decoration:none;color:#fff;backdrop-filter:blur(12px);transition:transform .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);}
 .download-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.18);border-color:rgba(223,209,29,.5);}
 .download-card:focus-visible{outline:3px solid rgba(223,209,29,.8);outline-offset:4px;}
-.download-card strong{font-family:var(--font-head);font-size:1rem;line-height:1.35;}
-.download-card span:last-child{color:rgba(255,255,255,.76);font-size:.92rem;}
+.download-card strong{font-family:var(--font-head);font-size:1rem;line-height:1.35;overflow-wrap:anywhere;text-wrap:pretty;}
+.download-card span:last-child{color:rgba(255,255,255,.76);font-size:.92rem;overflow-wrap:anywhere;text-wrap:pretty;}
 .download-kicker{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:.3rem .55rem;border-radius:999px;background:rgba(223,209,29,.22);color:var(--accent-l);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
 .case-marquee{position:relative;z-index:1;margin-top:1.5rem;overflow:hidden;mask-image:linear-gradient(to right,transparent 0,black 10%,black 90%,transparent 100%);}
 .case-track{display:flex;gap:1rem;width:max-content;animation:case-scroll 28s linear infinite;}

@@ -21,6 +21,11 @@
     try { localStorage.setItem(key, JSON.stringify(obj)); consent = obj; } catch (e) { /* ignore */ }
   }
 
+  function getCookiePolicyHref() {
+    var path = String(window.location.pathname || '').toLowerCase();
+    return path.indexOf('/pages/') !== -1 ? 'polityka-cookies.html' : 'pages/polityka-cookies.html';
+  }
+
   function applyConsentObj(obj) {
     if (!obj) return;
     // Analytics (e.g., Google) loaded only when analytics:true
@@ -138,7 +143,7 @@
     banner.className = 'bzdf-cookie-banner';
     banner.setAttribute('role','region');
     banner.setAttribute('aria-label','Informacja o cookies');
-    banner.innerHTML = '\n      <div class="bzdf-cookie-inner">\n        <p>Używamy plików cookies, aby poprawić działanie serwisu oraz analizować ruch. <a href="polityka-cookies.html">Dowiedz się więcej</a>.</p>\n        <div class="bzdf-cookie-actions">\n          <button id="bzdf-accept" class="btn btn-primary">Akceptuję</button>\n          <button id="bzdf-settings" class="btn">Ustawienia</button>\n          <button id="bzdf-decline" class="btn">Odrzuć</button>\n        </div>\n      </div>';
+    banner.innerHTML = '\n      <div class="bzdf-cookie-inner">\n        <p>Używamy plików cookies, aby poprawić działanie serwisu oraz analizować ruch. <a href="' + getCookiePolicyHref() + '">Dowiedz się więcej</a>.</p>\n        <div class="bzdf-cookie-actions">\n          <button id="bzdf-accept" class="btn btn-primary">Akceptuję</button>\n          <button id="bzdf-settings" class="btn">Ustawienia</button>\n          <button id="bzdf-decline" class="btn">Odrzuć</button>\n        </div>\n      </div>';
     document.body.appendChild(banner);
     // event listeners
     document.getElementById('bzdf-accept').addEventListener('click', acceptAll);

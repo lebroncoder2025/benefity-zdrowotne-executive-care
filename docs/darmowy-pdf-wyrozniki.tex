@@ -1,177 +1,197 @@
-\documentclass[10pt,a4paper]{article}
-
-\usepackage[T1]{fontenc}
+\documentclass[11pt,a4paper]{article}
+{
+\small\color{textgray}Benefity Zdrowotne dla Firm \textbar{} praktyczne wdrożenia pakiet\'ow medycznych dla firm}
 \usepackage[utf8]{inputenc}
 \usepackage[polish]{babel}
 \usepackage{lmodern}
-\usepackage[top=1.8cm, bottom=1.8cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=1.45cm, bottom=1.4cm, left=1.5cm, right=1.5cm]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage[parfill]{parskip}
-\usepackage{enumitem}
 \usepackage{graphicx}
-\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{pifont}
+\usepackage[most]{tcolorbox}
 
 \definecolor{brand}{HTML}{164CA9}
 \definecolor{branddark}{HTML}{103A81}
 \definecolor{accent}{HTML}{DFD11D}
 \definecolor{textgray}{HTML}{46587F}
 \definecolor{lightbox}{HTML}{EEF4FF}
+\definecolor{mint}{HTML}{7CBC52}
+\definecolor{cta}{HTML}{F05A59}
+\definecolor{border}{HTML}{D9E4FA}
 
 \hypersetup{
   colorlinks=true,
   urlcolor=brand,
   linkcolor=brand,
-  pdftitle={Wyrozniki modelu nieabonamentowego -- Benefity Zdrowotne dla Firm},
+  pdftitle={7 pytań, które zmieniają pakiet medyczny w realne wsparcie},
   pdfauthor={Benefity Zdrowotne dla Firm}
 }
 
-\setlength{\parskip}{0.3em}
+\setlength{\parskip}{0.25em}
+\pagestyle{empty}
 
-\setlist[itemize]{
-  leftmargin=1.3em,
-  itemsep=0.15em,
-  topsep=0.15em,
-  parsep=0pt,
-  label={\textcolor{brand}{\textbullet}}
+\newtcolorbox{questionbox}[2][]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=border,
+  boxrule=0.8pt,
+  arc=5mm,
+  left=10pt,
+  right=10pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=10pt,
+  after skip=0pt,
+  title={#2},
+  fonttitle=\bfseries\large\color{brand},
+  coltitle=brand,
+  attach boxed title to top left={xshift=0.5em,yshift*=-\tcboxedtitleheight/2},
+  boxed title style={
+    colback=lightbox,
+    colframe=lightbox,
+    arc=4mm,
+    boxrule=0pt,
+    left=6pt,
+    right=8pt,
+    top=5pt,
+    bottom=5pt
+  },
+  #1
+}
+
+\newcommand{\checkicon}{\textcolor{mint}{\ding{51}}}
+
+\newcommand{\question}[3]{%
+\begin{questionbox}{\checkicon\hspace{0.5em}#1. #2}
+{\small #3}
+\end{questionbox}
 }
 
 \begin{document}
-\pagestyle{empty}
 
-%--- NAGLOWEK ---
 \noindent
-\begin{minipage}[c]{0.44\textwidth}
-  \includegraphics[height=2cm]{../assets/Projekt-bez-nazwy.png}
+\begin{minipage}[t]{0.69\textwidth}
+  {\fontsize{24}{28}\selectfont\bfseries\color{brand} 7 pyta\'n, kt\'ore zmieniaj\k{a} pakiet medyczny w realne wsparcie\par}
+  \vspace{0.35em}
+  {\large\color{branddark}(przeka\.z go osobie, kt\'ora zajmuje si\k{e} benefitami u Ciebie w pracy)\par}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.52\textwidth}
+\begin{minipage}[t]{0.26\textwidth}
   \raggedleft
-  {\large\bfseries\color{brand} Wyr\'o\.zniki modelu nieabonamentowego}\\[0.2em]
-  {\small\color{textgray} materia\l{} dla firm i dzia\l{}\'ow HR}
+  \includegraphics[width=0.95\linewidth]{../assets/Projekt-bez-nazwy.png}
 \end{minipage}
 
-\vspace{0.3em}
+\vspace{0.55em}
 \noindent\textcolor{accent}{\rule{\textwidth}{4pt}}
-\vspace{0.35em}
 
-%--- INTRO ---
-{\small\color{textgray}
-Ten materia\l{} porz\k{a}dkuje najwa\.zniejsze atuty rozwi\k{a}zania, o kt\'orym rozmawiamy z w\l{}a\'scicielami firm,
-HR-em i osobami odpowiedzialnymi za benefity. Ma pom\'oc szybko oceni\'c, gdzie ten model realnie
-wspiera ludzi, procesy i interes biznesu.
+\begin{tcolorbox}[
+  enhanced,
+  colback=lightbox,
+  colframe=lightbox,
+  arc=5mm,
+  boxrule=0pt,
+  left=12pt,
+  right=12pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=10pt,
+  after skip=8pt
+]
+{\large\bfseries\color{branddark}Pakiet medyczny mo\.ze by\'c game-changerem... albo kompletn\k{a} fikcj\k{a}.\par}
+{\normalsize\color{textgray}R\'o\.znica? To, jaki i jak wybierzesz.\par}
+\end{tcolorbox}
+
+\question{1}{Model finansowania -- abonament vs fee for service}{%
+To punkt, od kt\'orego warto zacz\k{a}\'c.\\[0.25em]
+Abonament = plac\'owka dosta\l{}a pieni\k{a}dze z g\'ory $\rightarrow$ termin\'ow brakuje.\\
+Fee for service = p\l{}atno\'s\'c za realn\k{a} wizyt\k{e} $\rightarrow$ specjalista jest dost\k{e}pny.\\
+Dost\k{e}pno\'s\'c i jako\'s\'c opieki zaczyna si\k{e} w\l{}a\'snie tutaj.
+}
+
+\question{2}{Czy mo\.zesz obj\k{a}\'c pakietem rodzic\'ow?}{%
+Ma\l{}.zonek i dzieci w polisie to dzi\'s niemal standard. Ale mo\.zliwo\'s\'c obj\k{e}cia rodzic\'ow to benefit,
+kt\'ory naprawd\k{e} robi efekt WOW i wyr\'o\.znia pracodawc\k{e} na tle rynku.
+}
+
+\question{3}{Czy wiesz, czego potrzebuj\k{a} Twoi pracownicy?}{%
+Pakiety ,,z katalogu'' rzadko trafiaj\k{a} w sedno. Dlatego pierwszym krokiem powinna by\'c ankieta potrzeb.\\[0.35em]
+{\color{branddark}\bfseries Wskaz\'owka:} Mamy gotowe, sprawdzone narz\k{e}dzie. Chcesz to zrobi\'c dobrze? Odezwij si\k{e}.
+}
+
+\question{4}{Ile realnie czeka si\k{e} na wizyt\k{e}?}{%
+Regulaminy swoje, \.zycie swoje. Najprostszy test: sprawd\'z, ile czeka pacjent z pakietem, a ile prywatny klient.\\[0.35em]
+{\color{branddark}\bfseries Wskaz\'owka:} Mamy sprawdzony spos\'ob, jak weryfikowa\'c dost\k{e}pno\'s\'c w praktyce.
+}
+
+\vfill
+\begin{flushright}
+  {\small\color{textgray}benefityzdrowotne.pl}
+\end{flushright}
+
+\newpage
+
+\begin{tcolorbox}[
+  enhanced,
+  colback=white,
+  colframe=border,
+  arc=5mm,
+  boxrule=0.8pt,
+  left=12pt,
+  right=12pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=0pt,
+  after skip=4pt
+]
+{\large\bfseries\color{brand}Lista pyta\'n, kt\'ora porz\k{a}dkuje rozmow\k{e} z dostawc\k{a} opieki medycznej\par}
+{\normalsize\color{textgray}To materia\l{}, kt\'ory warto mie\'c pod r\k{e}k\k{a}, zanim firma podpisze umow\k{e}.\par}
+\end{tcolorbox}
+
+\question{5}{Kto faktycznie p\l{}aci za pakiet?}{%
+Nawet niewielkie dop\l{}aty pracownika mog\k{a} skutkowa\'c rezygnacj\k{a}. Dane rynkowe pokazuj\k{a} jasno:
+finansowanie przez firm\k{e} zwi\k{e}ksza realne korzystanie z pakietu.
+}
+
+\question{6}{Czy po podpisaniu umowy kto\'s si\k{e} zajmie Twoj\k{a} firm\k{a}?}{%
+Agent, broker, support czy tylko infolinia? To decyduje, czy HR b\k{e}dzie mia\l{} wsparcie,
+czy zostanie sam z pytaniami pracownik\'ow.
+}
+
+\question{7}{Czy pakiet obejmuje rehabilitacj\k{e} i zdrowie psychiczne?}{%
+86\% Polak\'ow ma b\'ole kr\k{e}gos\l{}upa (WP abcZdrowie). Tymczasem w 9 na 10 pakiet\'ow rehabilitacja nie istnieje.
+To kluczowe przy siedz\k{a}cym trybie pracy.
 }
 
 \vspace{0.4em}
-
-%--- RAMKA GLOWNA ---
 \begin{tcolorbox}[
-  colback=lightbox,
-  colframe=brand,
-  arc=2mm,
-  boxrule=1.2pt,
-  left=8pt, right=8pt, top=5pt, bottom=5pt
+  enhanced,
+  colback=cta!8,
+  colframe=cta!24,
+  arc=6mm,
+  boxrule=0.8pt,
+  left=12pt,
+  right=12pt,
+  top=10pt,
+  bottom=10pt
 ]
-{\color{branddark}\bfseries Najwa\.zniejszy wyr\'o\.znik: model nieabonamentowy --- jedyny na rynku.}\\[0.25em]
-{\small\color{textgray}
-Pieni\k{a}dze id\k{a} za pacjentem, wi\k{e}c w interesie plac\'owek jest zorganizowa\'c wizyt\k{e} jak najszybciej,
-bo dopiero wtedy otrzymuj\k{a} wynagrodzenie. To mechanizm, kt\'ory naturalnie podnosi standard obs\l{}ugi
-i wyra\'znie wyr\'o\.znia ten model na rynku.
-}
+{\Large\bfseries\color{cta}Chcesz sprawdzi\'c, jak wygl\k{a}da\l{}by najlepszy pakiet w Twojej firmie?\par}
+{\normalsize\color{branddark}Napisz do nas -- przeprowadzimy Ci\k{e} krok po kroku przez proces.\par}
 \end{tcolorbox}
 
-\vspace{0.55em}
-
-%--- NAGLOWEK SEKCJI ---
+\vspace{0.5em}
 \noindent
-\colorbox{brand}{\hspace{0.4em}\color{white}\normalsize\bfseries 6 kluczowych atut\'ow\hspace{0.4em}}
-\vspace{0.35em}
-
-%--- 1 ---
-\noindent{\color{brand}\bfseries 1.~Og\'olnopolski dost\k{e}p}
-\begin{itemize}
-  \item w pakiecie s\k{a} zar\'owno ma\l{}e gabinety z wysoko ocenianymi specjalistami, jak i du\.ze renomowane plac\'owki,
-  \item ponad 3\,400 plac\'owek w ca\l{}ej Polsce,
-  \item mo\.zliwo\'s\'c w\l{}\k{a}czenia plac\'owki wskazanej przez pracownik\'ow.
-\end{itemize}
-
-%--- 2 ---
-\noindent{\color{brand}\bfseries 2.~Wygoda korzystania}
-\begin{itemize}
-  \item nielimitowany dost\k{e}p do specjalist\'ow bez skierowania,
-  \item lekarz POZ w ci\k{a}gu 1 dnia roboczego, specjalista w ci\k{a}gu 5 dni,
-  \item e-wizyty: konsultacje, skierowania, e-recepty, e-zwolnienia i omawianie wynik\'ow.
-\end{itemize}
-
-%--- 3 ---
-\noindent{\color{brand}\bfseries 3.~Rehabilitacja i wsparcie po wypadkach}
-\begin{itemize}
-  \item rehabilitacja powypadkowa ze sprz\k{e}tem w cenie pakietu,
-  \item organizacja pomocy po hospitalizacji: piel\k{e}gniarka, pomoc domowa, zwrot koszt\'ow lek\'ow,
-  \item dodatkowa rehabilitacja b\'olowa, cz\k{e}sto przydatna przy pracy biurowej i przeci\k{a}\.zeniach kr\k{e}gos\l{}upa.
-\end{itemize}
-
-%--- 4 ---
-\noindent{\color{brand}\bfseries 4.~Elastyczno\'s\'c i dopasowanie}
-\begin{itemize}
-  \item mo\.zliwo\'s\'c zmiany pakietu na wy\.zszy w ka\.zdej chwili,
-  \item cz\k{e}\'sciowa refundacja koszt\'ow z plac\'owek spoza listy,
-  \item model \l{}atwo dopasowa\'c do potrzeb firmy i struktury zespo\l{}u.
-\end{itemize}
-
-%--- 5 ---
-\noindent{\color{brand}\bfseries 5.~Pe\l{}na obs\l{}uga i opieka doradcy}
-\begin{itemize}
-  \item bezpo\'sredni kontakt z doradc\k{a} na ka\.zdym etapie,
-  \item wsparcie przy wdra\.zaniu, deklaracjach i bie\.z\k{a}cych pytaniach,
-  \item organizacja akcji wellbeingowych i edukacyjnych, aby pracownicy faktycznie korzystali z pakietu.
-\end{itemize}
-
-%--- 6 ---
-\noindent{\color{brand}\bfseries 6.~Pakiet Rodzic}
-\begin{itemize}
-  \item specjalny, dedykowany pakiet ze specjalistami dla starszych os\'ob,
-  \item rozwi\k{a}zanie przydatne tam, gdzie pracownicy cz\k{e}sto wspieraj\k{a} rodzic\'ow lub opiekun\'ow.
-\end{itemize}
-
-\vspace{0.55em}
-
-%--- RAMKA CTA ---
-\begin{tcolorbox}[
-  colback=brand,
-  colframe=brand,
-  arc=2mm,
-  boxrule=0pt,
-  left=8pt, right=8pt, top=5pt, bottom=5pt
-]
-{\color{white}\bfseries Co dzieje si\k{e} dalej?}\\[0.2em]
-{\small\color{white}
-Po otrzymaniu formularza wracamy z kr\'otk\k{a} rozmow\k{a}, propozycj\k{a} kierunku oferty i list\k{a}
-najwa\.zniejszych decyzji do podj\k{e}cia. Dzi\k{e}ki temu od pocz\k{a}tku wiadomo, co chroni pracownik\'ow,
-a co zabezpiecza interes w\l{}a\'sciciela firmy.
-}
-\end{tcolorbox}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  {\large\bfseries\color{brand}Patrycja Ro\.zek} & {\large\bfseries\color{brand}Joanna Ligierska-Sad\l{}o} \\
+  {\Large\color{branddark}665\ 359\ 534} & {\Large\color{branddark}791\ 032\ 017} \\
+  \href{mailto:benefityzdrowotne@gmail.com}{benefityzdrowotne@gmail.com} & \href{https://benefityzdrowotne.pl}{benefityzdrowotne.pl}
+\end{tabularx}
 
 \vfill
-
-%--- STOPKA ---
 \noindent\textcolor{accent}{\rule{\textwidth}{3pt}}\\[0.25em]
-{\small\color{textgray}
-\textbf{\color{brand}Benefity Zdrowotne dla Firm}\enspace\textbar\enspace
-\href{mailto:benefityzdrowotne@gmail.com}{benefityzdrowotne@gmail.com}\enspace\textbar\enspace
-+48\,665\,359\,534\enspace\textbar\enspace
-+48\,791\,032\,017
-}
-
-%=== STRONA 2 - ANKIETA ===
-\clearpage
-\newgeometry{top=0.4cm, bottom=0.4cm, left=0.4cm, right=0.4cm}
-\pagestyle{empty}
-
-\vspace*{\fill}
-\begin{center}
-  \includegraphics[width=\textwidth, height=\dimexpr\textheight-0.8cm\relax, keepaspectratio]{ankieta-tyl.png}
-\end{center}
-\vspace*{\fill}
+{\small\color{textgray}Benefity Zdrowotne dla Firm \textbar{} praktyczne wdrożenia pakiet\'ow medycznych dla firm}
 
 \end{document}
